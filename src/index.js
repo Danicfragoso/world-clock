@@ -14,7 +14,7 @@ amsterdamDateElement.innerHTML = moment().format("MMMM Do YYYY");
 amsterdamTimeElement.innerHTML = moment().tz("Europe/Amsterdam").format("HH:mm:ss");
 }, 1000)
 
-setInterval(function updateCity(event) {
+function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
@@ -29,8 +29,8 @@ setInterval(function updateCity(event) {
       <div class="time">${cityTime.format("HH:mm:ss")}</div>
     </div>
   `;
-}, 1000)
-
+}
+setInterval(updateCity, 1000);
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
 
