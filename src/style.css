@@ -33,11 +33,6 @@ select {
     border: 1.5px solid white;
     border-radius: 12px;
 }
-.time {
-    font-size: 30px;
-    font-weight: bold;
-
-}
 #display-city {
     display: flex;
     flex-direction: column;
@@ -48,12 +43,18 @@ select {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.left-side:last-child {
+    border: none;
+}
+.time {
+    font-size: 30px;
+    font-weight: bold;
+
 }
 .date {
     opacity: 0.5;
-}
-.left-side+.left-side {
-    border-top: 1px solid #e5dfd8;
 }
 
 footer {
